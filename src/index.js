@@ -15,12 +15,8 @@ function renderGood() {
   render(<GoodComponent/>, document.getElementById('component-2'));
 }
 
-// If renderBroken is called before the good component is rendered, ComponentDidMount is
-// never called on the good component.
-// Should they not be totally separate?
+renderBroken(); // Comment out this line to see the componentDidMount working in the Good Component
 
-renderBroken();
-
-renderGood();
+renderGood(); // This renders but componentDidMount is not called when there is an error in the previous component
 
 
