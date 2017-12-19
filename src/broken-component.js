@@ -8,7 +8,7 @@ export class BrokenComponent extends Component {
   }
 
   render() {
-    const x = a.b;
+    const x = a.b; // This will cause an Error
     return <div>Bad Component</div>
   }
 
